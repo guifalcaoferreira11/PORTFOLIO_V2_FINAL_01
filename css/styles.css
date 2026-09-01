@@ -170,21 +170,26 @@ text-decoration: underline;
 @media (max-width: 768px) {
 
    .about-text {
+    font-family: "pp radio grotesk";
   font-size: 22px;
   line-height: 1.3;
   word-spacing: 1px;
+  
 }
 
   .about-contact {
+    font-family: "pp radio grotesk";
     margin-top: 0rem;
     font-size: 18px;
   }
 
   .about-social-media {
+    font-family: "pp radio grotesk";
     padding-left: 6.rem;
     text-align: right;
      font-size: 18px;
   }
+
 }
 
 
