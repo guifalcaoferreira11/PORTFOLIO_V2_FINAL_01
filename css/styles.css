@@ -20,6 +20,11 @@
     }
 }
 
+@font-face {
+  font-family: "pp radio grotesk";
+  src: url("fonts/PPRadioGrotesk-Regular.woff2") format("woff2"),
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -98,6 +103,8 @@ header nav ul li a:hover {
 header nav ul li a.active {
   text-decoration: underline;
 }
+
+
 
 
 /* ---------- MAIN ---------- */
