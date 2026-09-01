@@ -25,6 +25,7 @@
   padding: 0;
   box-sizing: border-box;
   cursor: url('../img/cursor.jpg'), auto;
+  font-family: "pp radio grotesk", sans-serif;
 }
 
 
@@ -91,6 +92,7 @@ header nav ul li a {
 
 header nav ul li a:hover {
   text-decoration: underline;
+
 }
 
 header nav ul li a.active {
@@ -143,7 +145,7 @@ main.home .home-image img {
 /* ---------- ABOUT ---------- */
 
 main.about {
-    padding-top: 0.1rem;
+    padding-top: 2rem;
 }
 
 main.about section {
@@ -152,34 +154,10 @@ main.about section {
 
 /* ---------- TEXTO ABOUT ---------- */
 .about-text { 
-  font-size: 2.8rem; 
-  line-height: 1.3; 
+  font-size: 4.3rem; 
+  line-height: 4.6rem; 
   margin-bottom: 5.2rem;
   display: flex;
-}
-
-
-/* ---------- CONTACTOS ABOUT ---------- */
-.about-contact,
-.about-social-media {
-    font-size: 1.5rem;
-    padding-top: 2.6rem;
-}
-
-.about-social-media {
-padding-left: 6rem;
-}
-
-
-/* ---------- IMAGEM ABOUT ---------- */
-.about-image {
-  width: 100%;
-  height: auto; /* Altura máxima para evitar distorção */
-  max-height: calc(100dvh - 9rem); /* Limite visual */
-  min-height: calc(100dvh - 9rem); /* Limite baseado na altura da viewport */
-  object-fit: cover; /* Mantém cortes bonitos */
-  display: block;
-  border-radius: 0.3rem;
 }
 
 /* ---------- HOVER ABOUT ---------- */ 
@@ -207,17 +185,178 @@ text-decoration: underline;
     text-align: right;
      font-size: 18px;
   }
-
-  .about-image {
-  margin-top: 1rem;
-  border-radius: 0.3rem;
 }
+
+
+/* ---------- TEXTO PRINCIPAL ---------- */
+.about-text { 
+  font-size: 4.5rem; 
+  line-height: 1.08; 
+  letter-spacing: -0.02em;
+  margin-bottom: 5.2rem;
+  width: 100%;
+}
+
+/* Tamanho controlado para ecrãs muito grandes (evita que fique desproporcional) */
+@media (min-width: 1800px) {
+  .about-text {
+    font-size: 6.2rem;
+    line-height: 6.5rem;
+    margin-bottom: 10rem;
+  }
+}
+
+/* ---------- CONTACTOS E REDES ALINHADOS ÀS MARGENS ---------- */
+.about-contacts-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.about-contact,
+.about-social-media {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.about-social-media {
+  text-align: left;
+}
+
+.about-social-media a:hover,
+.about-contact a:hover { 
+  text-decoration: underline;
+}
+
+/* ---------- ESTRUTURA RESUME (Education & Exhibitions) ---------- */
+
+.resume-section {
+  
+  border-top:  solid #000;   /* Linha superior */
+  border-bottom: solid #000; /* Linha inferior */
+  padding-top: 2rem;           /* Espaço superior interno */
+  padding-bottom: 2rem;        /* Espaço inferior interno */
+  margin-top: 3.5rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.resume-section-exhibitions {
+  border-bottom: solid #000; /* Linha inferior */
+           /* Espaço superior interno */
+  padding-bottom: 2rem;            /* Espaço inferior interno */
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.resume-section-awards {
+  border-bottom: solid #000; /* Linha inferior */
+  padding-bottom: 2rem;        /* Espaço inferior interno */
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.resume-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Título à esquerda */
+
+.resume-title h2.underline {
+  font-size: 2rem;
+  font-weight: normal;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  margin: 0;
+  line-height: 1.35;
+}
+
+/* Lista de itens à direita */
+.resume-list {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+ 
+/* Cada item com Data e Descrição */
+.resume-item {
+  
+  display: flex;
+  justify-content: right;
+  align-items: baseline;
+  font-size: 2rem;
+  line-height: 1.35;
+  color: #000;
+}
+
+
+.resume-item .description {
+  width: 80%;
+  text-align: left; /* Alinha a descrição à borda direita da página */
+}
+
+/* ---------- RESPONSIVO (MOBILE / TABLET) ---------- */
+
+@media (max-width: 992px) {
+  .about-text {
+    font-size: 2.8rem;
+    line-height: 1.15;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-text {
+    font-size: 1.5rem;
+    line-height: 1.25;
+    margin-bottom: 2.5rem;
+  }
+
+  .about-contacts-wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .about-social-media {
+    text-align: left;
+  }
+
+  .resume-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .resume-title,
+  .resume-list {
+    width: 100%;
+  }
+
+  .resume-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+
+  .resume-item .date,
+  .resume-item .description {
+    width: 100%;
+    text-align: left;
+  }
 }
 
 /* ---------- WORK ---------- */
 
 main.work .card{
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 main.work .card-image{
