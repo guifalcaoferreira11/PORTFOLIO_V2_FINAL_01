@@ -107,7 +107,7 @@ main {
 
 @font-face {
   font-family: "pp radio grotesk";
-  src: url("fonts/PPRadioGrotesk-Regular.woff2");
+  src: url("fonts/PPRadioGrotesk-Regular.woff2") format("woff2"),
 }
 
 body {
