@@ -158,7 +158,8 @@ main.home {
 
 main.home .home-image {
   width: 100%;
-  
+  position: relative;
+  z-index: 1;
 }
 
 main.home .home-image img {
