@@ -442,7 +442,7 @@ main.work .card-image::after {
 }
 
 main.work .card-image:hover::after {
-  opacity: 0.5;
+  opacity: 10;
 }
 
 main.projects .alquimia .single-title {
