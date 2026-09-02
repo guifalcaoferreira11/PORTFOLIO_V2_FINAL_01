@@ -30,12 +30,34 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: url('../img/cursor.jpg'), auto;
+  cursor: none;
   font-family: "pp radio grotesk", sans-serif;
 }
 
+/* ------------- TEXT SELECTION ------------- */
 
-/* ---------- TEXT SELECTION ---------- */
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  background-color: white; /* Base color for inverting */
+  border-radius: 0%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Allows clicks to pass through to elements below */
+  z-index: 9999;
+  mix-blend-mode: difference; /* Inverts color relative to elements behind it */
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease-out; /* Smooth hover resize */
+}
+
+/* Optional: Enlarge cursor when hovering interactive elements */
+body:has(a:hover, button:hover, .card-image:hover) .custom-cursor {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+
+/* ------------- TEXT SELECTION ------------- */
 
 *::selection {
   color: whitesmoke;
@@ -62,7 +84,7 @@ a {
 }
 
 
-/* ---------- HEADER ---------- */
+/* ------------- HEADER ------------- */
 
 header {
   position: fixed;
@@ -82,7 +104,7 @@ header {
 /* Logo size adjustment */
 header .logo-image {
   padding-top: 0.6rem;
-  width: 80px; /* Change this value to your desired logo width */
+  width: 80px; 
   height: auto;
 }
 
@@ -106,9 +128,7 @@ header nav ul li a.active {
 }
 
 
-
-
-/* ---------- MAIN ---------- */
+/* ------------- MAIN ------------- */
 main {
   margin-top: 4rem;
 }
@@ -125,7 +145,7 @@ body {
   font-size: 1.04rem;
 }
 
-/* ---------- HOME ---------- */
+/* ------------- HOME ---------------- */
 
 main.home {
   display: flex;
@@ -150,7 +170,7 @@ main.home .home-image img {
 }
 
 
-/* ---------- ABOUT ---------- */
+/* ------------- ABOUT ------------- */
 
 main.about {
     padding-top: 2rem;
@@ -169,36 +189,9 @@ main.about section {
 }
 
 /* ---------- HOVER ABOUT ---------- */ 
-main.about section .about-social-media a:hover { 
+.description a:hover { 
 text-decoration: underline;
 }
-
-
-/* ---------- ABOUTV2 MOBILE ---------- */
-@media (max-width: 768px) {
-
-   .about-text {
-
-  font-size: 22px;
-  line-height: 1.3;
-  word-spacing: 1px;
-  
-}
-
-  .about-contact {
-
-    margin-top: 0rem;
-    font-size: 18px;
-  }
-
-  .about-social-media {
-    padding-left: 6.rem;
-    text-align: right;
-     font-size: 18px;
-  }
-
-}
-
 
 /* ---------- TEXTO PRINCIPAL ---------- */
 .about-text { 
@@ -315,7 +308,7 @@ text-decoration: underline;
   text-align: left; /* Alinha a descrição à borda direita da página */
 }
 
-/* ---------- RESPONSIVO (MOBILE / TABLET) ---------- */
+/* ----------  ABOUT RESPONSIVO (MOBILE / TABLET) ---------- */
 
 @media (max-width: 992px) {
   .about-text {
