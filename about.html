@@ -148,6 +148,26 @@
 
         </section>
       </div>
+
+
+      
+
+      
+<div class="custom-cursor"></div>
+
+<script>
+  const cursor = document.querySelector('.custom-cursor');
+
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  });
+</script>
+
+
+
+
+
     </main>
   </body>
 </html>
