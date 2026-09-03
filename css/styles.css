@@ -25,7 +25,6 @@
     }
 }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -33,6 +32,8 @@
   cursor: none;
   font-family: "pp radio grotesk", sans-serif;
 }
+
+
 
 /* ------------- TEXT SELECTION ------------- */
 
@@ -55,6 +56,7 @@
 body:has(a:hover, button:hover, .card-image:hover) .custom-cursor {
   transform: translate(-50%, -50%) scale(1.2);
 }
+
 
 
 /* ------------- TEXT SELECTION ------------- */
@@ -82,6 +84,7 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
 
 
 /* ------------- HEADER ------------- */
@@ -128,6 +131,7 @@ header nav ul li a.active {
 }
 
 
+
 /* ------------- MAIN ------------- */
 main {
   margin-top: 4rem;
@@ -144,6 +148,8 @@ body {
   background-color: #f6f6f6;
   font-size: 1.04rem;
 }
+
+
 
 /* ------------- HOME ---------------- */
 
@@ -171,6 +177,8 @@ main.home .home-image img {
 }
 
 
+
+
 /* ------------- ABOUT ------------- */
 
 main.about {
@@ -181,26 +189,28 @@ main.about section {
     margin-top: 2rem;
 }
 
+
+
 /* ---------- TEXTO ABOUT ---------- */
-.about-text { 
-  font-size: 4.3rem; 
-  line-height: 4.6rem; 
-  margin-bottom: 5.2rem;
-  display: flex;
-}
-
-/* ---------- HOVER ABOUT ---------- */ 
-.description a:hover { 
-text-decoration: underline;
-}
-
-/* ---------- TEXTO PRINCIPAL ---------- */
 .about-text { 
   font-size: 4.5rem; 
   line-height: 1.08; 
   letter-spacing: -0.02em;
   margin-bottom: 5.2rem;
   width: 100%;
+}
+
+
+
+/* ---------- HOVER ABOUT ---------- */ 
+.description a:hover { 
+  text-decoration: underline;
+}
+
+/* Target specific name hover effect */
+.highlight-name {
+  display: inline-block;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 /* Tamanho controlado para ecrãs muito grandes (evita que fique desproporcional) */
@@ -211,6 +221,8 @@ text-decoration: underline;
     margin-bottom: 10rem;
   }
 }
+
+
 
 /* ---------- CONTACTOS E REDES ALINHADOS ÀS MARGENS ---------- */
 .about-contacts-wrapper {
@@ -238,11 +250,12 @@ text-decoration: underline;
   text-decoration: underline;
 }
 
+
+
 /* ---------- ESTRUTURA RESUME (Education & Exhibitions) ---------- */
 
 .resume-section {
-  
-  border-top:  solid #000;   /* Linha superior */
+  border-top: solid #000;   /* Linha superior */
   border-bottom: solid #000; /* Linha inferior */
   padding-top: 2rem;           /* Espaço superior interno */
   padding-bottom: 2rem;        /* Espaço inferior interno */
@@ -253,8 +266,7 @@ text-decoration: underline;
 
 .resume-section-exhibitions {
   border-bottom: solid #000; /* Linha inferior */
-           /* Espaço superior interno */
-  padding-bottom: 2rem;            /* Espaço inferior interno */
+  padding-bottom: 2rem;        /* Espaço inferior interno */
   margin-bottom: 2rem;
   width: 100%;
 }
@@ -274,7 +286,6 @@ text-decoration: underline;
 }
 
 /* Título à esquerda */
-
 .resume-title h2.underline {
   font-size: 2rem;
   font-weight: normal;
@@ -291,10 +302,9 @@ text-decoration: underline;
   flex-direction: column;
   gap: 1.8rem;
 }
- 
+
 /* Cada item com Data e Descrição */
 .resume-item {
-  
   display: flex;
   justify-content: right;
   align-items: baseline;
@@ -303,11 +313,12 @@ text-decoration: underline;
   color: #000;
 }
 
-
 .resume-item .description {
   width: 80%;
-  text-align: left; /* Alinha a descrição à borda direita da página */
+  text-align: left;
 }
+
+
 
 /* ----------  ABOUT RESPONSIVO (MOBILE / TABLET) ---------- */
 
@@ -358,6 +369,8 @@ text-decoration: underline;
     text-align: left;
   }
 }
+
+
 
 /* ---------- WORK ---------- */
 
@@ -443,6 +456,8 @@ main.projects .alquimia .single-title {
 margin-top: 11rem;
 }
 
+
+
 /* ---------- SINGLE ---------- */
 
   main.single .single-sticky {
@@ -482,3 +497,7 @@ main.single .single-images img{
 .single-team a:hover {
     text-decoration: underline;
 }
+
+
+
+
