@@ -26,36 +26,15 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  cursor: none;
+margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url('../img/cursor.jpg') 10 10, auto;
   font-family: "pp radio grotesk", sans-serif;
 }
 
 
 
-/* ------------- TEXT SELECTION ------------- */
-
-.custom-cursor {
-  width: 20px;
-  height: 20px;
-  background-color: white; /* Base color for inverting */
-  border-radius: 0%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none; /* Allows clicks to pass through to elements below */
-  z-index: 9999;
-  mix-blend-mode: difference; /* Inverts color relative to elements behind it */
-  transform: translate(-50%, -50%);
-  transition: transform 0.15s ease-out; /* Smooth hover resize */
-}
-
-/* Optional: Enlarge cursor when hovering interactive elements */
-body:has(a:hover, button:hover, .card-image:hover) .custom-cursor {
-  transform: translate(-50%, -50%) scale(1.2);
-}
 
 
 
@@ -451,52 +430,85 @@ main.work .card-image:hover::after {
   opacity: 10;
 }
 
-main.projects .alquimia .single-title {
-margin-top: 11rem;
-}
-
-
 
 /* ---------- SINGLE ---------- */
 
-  main.single .single-sticky {
-  position: sticky;
-  top: 5.9rem;
-  margin-bottom: 2rem;
-  line-height: 1.5rem;
-  border-radius: 0.3rem;
-  }
+.single-info {
+    position: sticky;
+    top: 6rem;
+    margin-right: 1rem;
+}
 
-  main.single .single-title {
-  font-size: 1.5rem;
+@media(max-width: 992px) {
+    .single-info {
+        top: 8.5rem;
+    }
+}
+
+@media(max-width: 576px) {
+    .single-info {
+        position: static;
+        margin-top: 5rem;
+        
+    }
+}
+
+.single-title {
+ font-size: 2.1rem;
   margin-bottom: 1.9rem;
   margin-top: 1.9rem;
-  }
+}
 
-main.single .single-images img{
-  width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 1rem;
-    margin-top: 2.1rem;
-  border-radius: 0.3rem;
-  }
-
-  main.single .single-date p{
-    margin-top: 1.9rem;
-    font-size: 0.85rem;
-    line-height: 1.2rem;
-  }
-
-  .single-team p {
-    margin-top: 1rem;
-    font-size: 0.85rem;
-    line-height: 1.2rem;  }
-   
-.single-team a:hover {
-    text-decoration: underline;
+.single-image {
+  margin-top: 1.9rem;
+    list-style: none;
+    border-radius: 10px;
 }
 
 
+@media(max-width: 992px) {
+    .single-title {
+        font-size: 2.1rem;
+        width: fit-content;
+        height: fit-content;
+        margin-bottom: 1rem;
+        margin-top: 3rem;
+        
+        
+    }
+
+    .single-image {
+        margin-top: 3rem;
+    }
+}
+
+.single-word {
+    margin-left: 6rem;
+    display: flex;
+    margin-top: -20px;
+    
+    
+    
+}
+
+.single-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.single-image + .single-image {
+    margin-top: 1rem;
+    
+}
 
 
+.separator {
+    border: none;
+    border-top: 1px solid #000;
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+
+
+}
